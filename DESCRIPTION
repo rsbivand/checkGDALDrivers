@@ -1,0 +1,14 @@
+Package: checkGDALDrivers
+Version: 0.0-1
+Date: 2020-11-28
+Title: Check GDAL drivers
+Authors@R: c(
+  person("Roger", "Bivand", role=c("aut", "cre"), email="Roger.Bivand@nhh.no", comment=c(ORCID="0000-0003-2392-6140")))
+Depends: R (>= 2.2), rgdal
+NeedsCompilation: no
+Description: Check 'GDAL' driver availability in binary packages.
+License: GPL (>= 2)
+URL: https://github.com/rsbivand/checkGDALDrivers/
+BugReports: https://github.com/rsbivand/checkGDALDrivers/issues/
+Encoding: UTF-8
+
