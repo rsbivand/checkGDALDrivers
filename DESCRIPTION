@@ -1,7 +1,7 @@
 Package: checkGDALDrivers
 Version: 0.0-2
 Date: 2020-11-30
-Title: Check GDAL drivers
+Title: Check GDAL Drivers
 Authors@R: c(
   person("Roger", "Bivand", role=c("aut", "cre"), email="Roger.Bivand@nhh.no", comment=c(ORCID="0000-0003-2392-6140")))
 Depends: R (>= 3.5), rgdal

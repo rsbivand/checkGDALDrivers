@@ -21,7 +21,7 @@ Either exits on error or reports success.
 Roger Bivand
 }
 \examples{
-check_drivers("L7_ETMs.tif")
-check_drivers("L7_ETMs.jp2")
+#check_drivers("L7_ETMs.tif")
+#check_drivers("L7_ETMs.jp2")
 }
 
