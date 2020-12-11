@@ -3,7 +3,7 @@
 
 \title{Check presence of GDAL drivers using driver lists}
 
-\description{Check presence of GDAL drivers using driver lists}
+\description{Check presence of GDAL drivers using driver lists; updated after addition of JP2 to MacOS}
 
 \author{Roger Bivand}
 
