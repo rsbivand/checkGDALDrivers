@@ -1,12 +1,13 @@
 Package: checkGDALDrivers
-Version: 0.0-2
-Date: 2020-11-30
+Version: 0.0-3
+Date: 2025-02-03
 Title: Check GDAL Drivers
 Authors@R: c(
   person("Roger", "Bivand", role=c("aut", "cre"), email="Roger.Bivand@nhh.no", comment=c(ORCID="0000-0003-2392-6140")))
-Depends: R (>= 3.5), rgdal
+Depends: R (>= 3.5)
+Suggests: sf, terra, gdalraster
 NeedsCompilation: no
-Description: Check 'GDAL' driver availability in binary packages; with Simon Urbanek's addition of JP2 support, most pressure relieved.
+Description: Check 'GDAL' driver availability in binary packages.
 License: GPL (>= 2)
 URL: https://github.com/rsbivand/checkGDALDrivers/
 BugReports: https://github.com/rsbivand/checkGDALDrivers/issues/
