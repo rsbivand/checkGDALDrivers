@@ -14,7 +14,7 @@ if (requireNamespace("sf", quietly=TRUE)) {
 (diffs_vecs <- setdiff(shared$vecs, now_vecs))
 (now_rasts <- sf::st_drivers("raster")$name)
 (diffs_rasts <- setdiff(shared$rasts, now_rasts))
-if (length(diffs_vecs) > 0L || length(diffs_rasts) > 0L) stop("sf expected drivers missing:\nvector: ", paste(diffs_vecs, collapse=" "), "\nvector: ", paste(diffs_rasts, collapse=" "))
+if (length(diffs_vecs) > 0L || length(diffs_rasts) > 0L) stop("sf expected drivers missing:\nvector: ", paste(diffs_vecs, collapse=" "), "\nraster: ", paste(diffs_rasts, collapse=" "))
 }
 if (requireNamespace("terra", quietly=TRUE)) {
 tmp <- terra::gdal(drivers=TRUE)
@@ -22,7 +22,7 @@ tmp <- terra::gdal(drivers=TRUE)
 (diffs_vecs <- setdiff(shared$vecs, now_vecs))
 (now_rasts <- tmp$name[tmp$raster])
 (diffs_rasts <- setdiff(shared$rasts, now_rasts))
-if (length(diffs_vecs) > 0L || length(diffs_rasts) > 0L) stop("terra required drivers missing:\nvector: ", paste(diffs_vecs, collapse=" "), "\nvector: ", paste(diffs_rasts, collapse=" "))
+if (length(diffs_vecs) > 0L || length(diffs_rasts) > 0L) stop("terra required drivers missing:\nvector: ", paste(diffs_vecs, collapse=" "), "\nraster: ", paste(diffs_rasts, collapse=" "))
 }
 if (requireNamespace("gdalraster", quietly=TRUE)) {
 tmp1 <- gdalraster::gdal_formats()
@@ -30,7 +30,7 @@ tmp1 <- gdalraster::gdal_formats()
 (diffs_vecs <- setdiff(shared$vecs, now_vecs))
 (now_rasts <- tmp1$short_name[tmp1$raster])
 (diffs_rasts <- setdiff(shared$rasts, now_rasts))
-if (length(diffs_vecs) > 0L || length(diffs_rasts) > 0L) stop("gdalraster required drivers missing:\nvector: ", paste(diffs_vecs, collapse=" "), "\nvector: ", paste(diffs_rasts, collapse=" "))
+if (length(diffs_vecs) > 0L || length(diffs_rasts) > 0L) stop("gdalraster required drivers missing:\nvector: ", paste(diffs_vecs, collapse=" "), "\nraster: ", paste(diffs_rasts, collapse=" "))
 }
 }
 
