@@ -9,6 +9,7 @@
 
 \examples{
 shared <- readRDS(system.file("lists/shared25.rds", package="checkGDALDrivers"))
+driver_versions <- readRDS(system.file("lists/driver_versions.rds", package="checkGDALDrivers"))
 run <- FALSE
 if (requireNamespace("sf", quietly=TRUE)) run <- TRUE
 if (run) {
@@ -23,10 +24,16 @@ if (run) {
   (diffs_rasts <- setdiff(shared$rasts, now_rasts))
 }
 if (run) {
-  if (length(diffs_vecs) > 0L || length(diffs_rasts) > 0L) 
-    stop("GDAL ", gv, " drivers missing:\nvector: ",
-        paste(diffs_vecs, collapse=" "), 
-        "\nraster: ", paste(diffs_rasts, collapse=" "))
+  if (length(diffs_vecs) > 0L || length(diffs_rasts) > 0L) {
+    o <- match(diffs_vecs, names(driver_versions$vecsx))
+    vec_diff <- paste(paste(diffs_vecs[o], driver_versions$vecsx[o], sep=" "),
+        collapse=", ")
+    o <- match(diffs_rasts, names(driver_versions$rastsx))
+    rast_diff <- paste(paste(diffs_rasts[o], driver_versions$rastsx[o], sep=" "),
+        collapse=", ")
+    stop("GDAL ", gv, " drivers missing:\nvector: ", vec_diff, 
+        "\nraster: ", rast_diff)
+  }
 }
 }
 

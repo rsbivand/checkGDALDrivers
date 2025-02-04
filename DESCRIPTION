@@ -5,7 +5,7 @@ Title: Check GDAL Drivers
 Authors@R: c(
   person("Roger", "Bivand", role=c("aut", "cre"), email="Roger.Bivand@nhh.no", comment=c(ORCID="0000-0003-2392-6140")))
 Depends: R (>= 3.5)
-Suggests: sf, terra, gdalraster
+Suggests: sf
 NeedsCompilation: no
 Description: Check 'GDAL' driver availability in binary packages.
 License: GPL (>= 2)
