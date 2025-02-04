@@ -24,7 +24,7 @@ if (run) {
 }
 if (run) {
   if (length(diffs_vecs) > 0L || length(diffs_rasts) > 0L) 
-    stop("GDAL ", gv, "drivers missing:\nvector: ",
+    stop("GDAL ", gv, " drivers missing:\nvector: ",
         paste(diffs_vecs, collapse=" "), 
         "\nraster: ", paste(diffs_rasts, collapse=" "))
 }
