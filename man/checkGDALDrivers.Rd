@@ -26,10 +26,10 @@ if (run) {
 if (run) {
   if (length(diffs_vecs) > 0L || length(diffs_rasts) > 0L) {
     o <- match(diffs_vecs, names(driver_versions$vecsx))
-    vec_diff <- paste(paste(diffs_vecs[o], driver_versions$vecsx[o], sep=" "),
+    vec_diff <- paste(paste(diffs_vecs, driver_versions$vecsx[o], sep=" "),
         collapse=", ")
     o <- match(diffs_rasts, names(driver_versions$rastsx))
-    rast_diff <- paste(paste(diffs_rasts[o], driver_versions$rastsx[o], sep=" "),
+    rast_diff <- paste(paste(diffs_rasts, driver_versions$rastsx[o], sep=" "),
         collapse=", ")
     stop("GDAL ", gv, " drivers missing:\nvector: ", vec_diff, 
         "\nraster: ", rast_diff)
